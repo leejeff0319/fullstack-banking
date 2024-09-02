@@ -1,3 +1,4 @@
+import MobileNav from "@/components/ui/MobileNav";
 import Sidebar from "@/components/ui/Sidebar";
 import Image from "next/image";
 
@@ -21,11 +22,11 @@ export default function RootLayout({
                         alt="menu icon"
                     />
                     <div>
-                        
+                        <MobileNav user={loggedIn} />
                     </div>
                 </div>
+                {children}
             </div>
-            {children}
         </main>
     );
 }
